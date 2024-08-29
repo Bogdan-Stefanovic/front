@@ -18,8 +18,3 @@
 ## Instalacija
 
 Da biste pokrenuli aplikaciju lokalno, pratite sledeće korake:
-
-1. **Klonirajte repozitorijum:**
-
-   ```bash
-   git clone <URL_REPOZITORIJUMA>
