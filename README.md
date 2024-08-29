@@ -14,3 +14,7 @@
 - **Backend**: Spring Boot
 - **Frontend**: Angular
 - **Baza podataka**: MySQL
+
+![image](https://github.com/user-attachments/assets/a1cfeacc-9451-4c11-b9ef-aa9293a0df56)
+![image](https://github.com/user-attachments/assets/262512c8-9344-4e98-95d5-8a2ff473a8ae)
+![image](https://github.com/user-attachments/assets/f30bffb8-26fe-4268-a3fc-0ea35baf40fc)
