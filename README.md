@@ -14,7 +14,3 @@
 - **Backend**: Spring Boot
 - **Frontend**: Angular
 - **Baza podataka**: MySQL
-
-## Instalacija
-
-Da biste pokrenuli aplikaciju lokalno, pratite sledeće korake:
