@@ -1,0 +1,30 @@
+<div class="container menu-item-details">
+  <div class="menu-item-image">
+    <img [src]="menuItem.imageUrl" alt="{{ menuItem.name }}" class="img-fluid rounded main-image">
+    <!-- Additional Images Section -->
+
+  </div>
+
+  <div class="menu-item-info">
+    <h2 class="menu-item-name">{{ menuItem.name }}</h2>
+
+
+    <div class="new-price text-info">{{ menuItem.price | currency }}</div>
+
+
+    <div class="about-item mt-4">
+      <h5>About This Item:</h5>
+      <p>{{ menuItem.description }}</p>
+    </div>
+
+    <div class="purchase-info">
+      <button class="quantity-btn" (click)="decrementQuantity()">-</button>
+      <input type="text" [(ngModel)]="quantity" class="quantity-input" [value]="quantity" readonly>
+      <button class="quantity-btn" (click)="incrementQuantity()">+</button>
+      <div class="d-flex mt-4">
+        <button class="btn btn-primary btn-lg add-to-cart mr-2 mb-4" (click)="orderNow()">Order Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Khand', sans-serif;
+}
+
+.menu-item-details {
+  margin-top: 120px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border: 1px solid #e0e0e0; /* Subtle border for card */
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+/* Product Image and Thumbnails */
+.menu-item-image {
+  flex: 1; /* Allow image section to take less space */
+  margin-right: 20px; /* Space between image and details */
+}
+
+.menu-item-image img.main-image {
+  border-radius: 10px;
+  width: 600px;
+  height: 450px; /* Adjusted height */
+  object-fit: cover;
+}
+
+.additional-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.additional-images img.img-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.additional-images img.img-thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Details */
+.menu-item-info {
+   /* Allow details section to take more space */
+   flex: 1;
+   margin-left: 220px;
+}
+
+.menu-item-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.store-link {
+  font-size: 1rem;
+}
+
+.rating {
+  font-size: 1.2rem;
+}
+
+.new-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #090000;
+}
+
+.discount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 5px;
+}
+
+.old-price {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.about-item h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.about-item p {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.purchase-info {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.quantity-input {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+
+.quantity-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #f1f1f1;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.quantity-btn:hover {
+  background-color: #ddd;
+}
+
+.btn.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 15px;
+
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-left: 30px;
+}
+
+.btn.add-to-cart:hover {
+  background-color: #ff5200;
+  border-color: #ff5200;
+}
+
+.btn.add-to-cart i {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container.menu-item-details {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .menu-item-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .menu-item-info {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .menu-item-name {
+    font-size: 1.5rem;
+  }
+
+  .new-price {
+    font-size: 1.5rem;
+  }
+
+  .quantity-btn, .quantity-input {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .btn.add-to-cart {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    margin-left: 130px;
+  }
+}

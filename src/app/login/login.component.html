@@ -1,0 +1,66 @@
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSignUpSubmit()">
+      <h1>Create Account</h1>
+      <div class="social-container">
+        <a href="#" class="social" (click)="preventNavigation($event)">
+          <img src="assets/images/facebook.png" alt="Facebook" height="20px"/>
+        </a>
+        <a href="#" class="social" (click)="preventNavigation($event)">
+          <img src="assets/images/twitter.png" alt="Twitter" height="20px"/>
+        </a>
+        <a href="#" class="social" (click)="preventNavigation($event)">
+          <img src="assets/images/google-plus.png" alt="Google" height="20px"/>
+        </a>
+      </div>
+      <span>or use your email for registration </span>
+      <input type="text" formControlName="username" placeholder="username" />
+      <input type="text" formControlName="lastname" placeholder="lastname" />
+      <input type="email" formControlName="email" placeholder="email" />
+      <input type="password" formControlName="password" placeholder="password" />
+      <input type="text" formControlName="phone" placeholder="phone number" />
+      <input type="text" formControlName="address" placeholder="address" />
+      <button type="submit">SIGN UP</button>
+
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form [formGroup]="signInForm" (ngSubmit)="onSignInSubmit()">
+      <h1>Sign in</h1>
+      <div class="social-container">
+        <a href="#" class="social" (click)="preventNavigation($event)">
+          <img src="assets/images/facebook.png" alt="Facebook" height="20px"/>
+        </a>
+        <a href="#" class="social" (click)="preventNavigation($event)">
+          <img src="assets/images/twitter.png" alt="Twitter" height="20px"/>
+        </a>
+        <a href="#" class="social" (click)="preventNavigation($event)">
+          <img src="assets/images/google-plus.png" alt="Google" height="20px"/>
+        </a>
+      </div>
+      <span>or use your account </span>
+      <input type="text" formControlName="username" placeholder="username" />
+      <input type="password" formControlName="password" placeholder="Password" />
+      <a href="#">Forgot your password?</a>
+      <button type="submit">SIGN IN</button>
+      <div *ngIf="signInError" class="error">{{ signInError }}</div>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" id="signIn" (click)="signIn()">SIGN IN</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <button class="ghost" id="signUp" (click)="signUp()">SIGN UP</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

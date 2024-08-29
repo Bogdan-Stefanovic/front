@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Khand', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 120px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border: 1px solid #e0e0e0; /* Subtle border for card */
+}
+
+.sidebar .profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* Delivery Time Styles */
+.delivery-time {
+  margin-left: 10px; /* Add some space between the dish name and the delivery time */
+}
+
+.delivery-time-icon {
+  width: 16px; /* Smaller icon to fit next to the name */
+  height: 16px;
+  margin-right: 5px; /* Spacing between the icon and text */
+}
+
+.delivery-time-text {
+  font-size: 0.8rem; /* Slightly smaller text to fit next to the name */
+  color: #555; /* Adjust the color to match your design */
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+
+
+.sidebar .nav-link {
+  color: #333;
+  font-weight: bold;
+  padding: 15px 10px;
+}
+
+.sidebar .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Sidebar Right */
+.sidebar-right {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 120px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border: 1px solid #e0e0e0; /* Subtle border for card */
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.search-form {
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-form input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Product Card Styles */
+.card {
+  margin-bottom: 20px;
+
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border: 1px solid #e0e0e0; /* Subtle border for card */
+  overflow: hidden; /* Ensure contents stay within the card */
+}
+
+.card-img-top {
+  height: 200px;  /* Adjusted to fit fixed card size */
+  object-fit: cover;
+  background-position: top;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-radius: 20px;
+}
+
+.card-body {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure buttons stay at the bottom */
+  height: 100%; /* Fill the card body */
+}
+
+/* Button Styles */
+.btn {
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.btn.add-to-cart {
+  background-color: #48b83e;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+
+.btn.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 15px;
+}
+
+.btn.btn-primary:hover {
+  background-color: #48b83e;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #48b83e;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #3e8e41;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-top: 30px;
+    padding-top: 0;
+  }
+
+  .search-form {
+    margin-top: 10px;
+    padding: 0 20px;
+  }
+}
+
+.nav-item {
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.nav-item.hovered {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.nav-item.active {
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+}
+
+.nav-item.active .nav-link {
+  border-radius: 10px;
+  color: white;
+}
+
+.nav-link {
+  color: #333;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.promo-card {
+  margin-bottom: 20px;
+}
+
+.promo-text h5 {
+  color: #ff0000;
+}
+
+.articles-section h6 {
+  font-weight: bold;
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+}
+
+.nav-item.hovered .nav-link {
+  background-color: #f0f0f0;
+}
+
+.nav-item.active .nav-link {
+  background-color: #007bff;
+  color: white;
+}

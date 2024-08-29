@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+
+<h1 style="margin-top: 100px;margin-left: 50px;margin-bottom: 20px">Shopping Cart</h1>
+
+<div class="shopping-cart">
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+
+  <div class="product" *ngFor="let item of cartItems; let i = index">
+    <div class="product-image">
+      <img [src]="item.imageUrl" alt="{{item.name}}">
+    </div>
+    <div class="product-details">
+      <div class="product-title">{{item.name}}</div>
+      <p class="product-description">{{item.description}}</p>
+    </div>
+    <div class="product-price">{{item.price | currency}}</div>
+    <div class="product-quantity">
+      <input type="number" [(ngModel)]="item.quantity" min="1" > <!-- Display the quantity here -->
+    </div>
+    <div class="product-removal">
+      <button class="remove-product" (click)="removeFromCart(i)">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">{{ calculateLinePrice(item) | currency }}</div>
+  </div>
+
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value">{{ calculateSubtotal() | currency }}</div>
+    </div>
+    <div class="totals-item">
+      <label>Delivery</label>
+      <div class="totals-value">{{ calculateShipping() }}</div>
+    </div>
+    <div class="totals-item">
+      <label>Total</label>
+      <div class="totals-value">{{ calculateTotalPriceWithShipping() | currency }}</div>
+    </div>
+  </div>
+  <button class="checkout" (click)="checkout()">Checkout</button>
+</div>

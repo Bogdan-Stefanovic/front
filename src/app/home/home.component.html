@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Left Sidebar with Most Expensive Items -->
+    <div class="col-md-2 sidebar-left">
+      <div class="promo-card cheapest-items-section mt-5">
+        <h6 class="text-center">Top Most Expensive Items</h6>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of mostExpensiveItems" (click)="viewProductDetails(item)">
+            <div class="d-flex align-items-center">
+              <img [src]="item.imageUrl" alt="{{ item.name }}" class="item-img" style="border-radius: 5px;">
+              <div class="d-flex flex-column ml-2">
+                <span>{{ item.name }}</span>
+                <span class="text-muted">{{ item.price | currency }}</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-8 main-content">
+      <div class="header text-center mt-3">
+        <h1>Welcome to Eatland <span>🍔</span></h1>
+
+      </div>
+
+      <div class="container py-2" style="margin-right: 350px">
+
+        <div class="row">
+          <div *ngFor="let restaurant of restaurants" class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="image-container">
+                <img [src]="restaurant.imageUrl" alt="{{ restaurant.name }}" class="card-img-top">
+                <button class="overlay-button" (click)="viewRestaurant(restaurant.id, restaurant.imageUrl)">View Details</button>
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">{{ restaurant.name }}</h5>
+                <p class="card-text">{{ restaurant.address }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar with Top 5 Cheapest Items -->
+    <div class="col-md-2 sidebar-right">
+      <div class="promo-card cheapest-items-section mt-5">
+        <h6 class="text-center">Top Cheapest Items</h6>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of cheapestItems" (click)="viewProductDetails(item)">
+            <div class="d-flex align-items-center">
+              <img [src]="item.imageUrl" alt="{{ item.name }}" class="item-img" style="border-radius: 5px;">
+              <div class="d-flex flex-column ml-2">
+                <span>{{ item.name }}</span>
+                <span class="text-muted">{{ item.price | currency }}</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

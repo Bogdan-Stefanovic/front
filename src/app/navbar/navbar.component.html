@@ -1,0 +1,28 @@
+<nav>
+  <div class="container">
+    <a href="#" id="brand">Food Delivery</a>
+    <button>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="navbar-menu">
+      <li><a href="/home">Home</a></li>
+<!--      <li><a href="/search">Search</a></li>-->
+      <li><a href="/order">Your Orders
+        <img src="assets/images/online-order.png" width="50px" height="40px" style="margin-bottom: 10px" [@bopAnimation]="animateCart">
+        <span style="border-radius: 50%; font-family: 'Arial Black', sans-serif; background-color: white; color: black; padding: 1px 2px 4px 2px; font-size: 12px; width: 20px; height: 20px; line-height: 20px; text-align: center; display: inline-block; position: relative; top: -12px; left: -4px;" [style.display]="cartItemCount === 0 ? 'none' : 'inline-block'">{{cartItemCount}}</span>
+      </a></li>
+      <ng-container *ngIf="isLoggedIn; else loggedOut">
+        <li><a href="/profile">Profile
+        </a></li>
+        <li><button (click)="signOut()">Sign Out</button></li>
+      </ng-container>
+      <ng-template #loggedOut>
+        <li><a href="/login">Login</a></li>
+      </ng-template>
+
+    </ul>
+  </div>
+</nav>
